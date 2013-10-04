@@ -50,7 +50,7 @@ class CkHelper extends WysiwygAppHelper {
 		$domId = $this->domId($fieldName);
 		$initOptions = $this->_initializationOptions($options);
 
-		$script = "var editor = CKEDITOR.replace({$domId}, {$initOptions});";
+		$script = "var editor = CKEDITOR.replace('{$domId}', {$initOptions});";
 		if (!empty($options['buffer'])) {
 			$this->Js->buffer($script);
 			return '';
